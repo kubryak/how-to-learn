@@ -9,15 +9,52 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
+ /*---- HEADER ----*/
+
 .header {
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
-  /* выше установили ограничения для секции */
-  /* border: 1px solid red; */
   background-color: #f1f1f1;
   position: relative;
   display: flex;
+  overflow: hidden;
+}
+
+.header__logo_place_header {
+  width: 228px;
+  height: 32px;
+  position: absolute;
+  top: 30px;
+  left: 64px;
+}
+
+
+.header__title {
+  left: 64px;
+  width: 730px;
+  font-size: 102px;
+  font-weight: 600;
+  margin-top: 0;
+  margin: auto;
+  margin-left: 64px;
+  flex-direction: row;
+  z-index: 3;
+}
+
+.header__subtitle {
+  position: absolute;
+  bottom: 30px;
+  left: 64px;
+  width: 388px;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #2f80ed;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -31,14 +68,6 @@
   z-index: 1;
 }
 
-/* и элемента с модификатором вида ключ-значение
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
-} */
-
 .header__main-illustration {
   width: 765px;
   height: 608px;
@@ -47,55 +76,23 @@
   bottom: 0;
   object-fit: cover;
   z-index: 2;
-  /* border: 1px solid red; */
 }
 
-.logo_place_header {
-  width: 228px;
-  height: 32px;
-  position: absolute;
-  top: 30px;
-  left: 64px;
-}
+ /*---- HEADER ----*/
 
-.header_title {
-  left: 64px;
-  width: 730px;
-  font-size: 102px;
-  font-weight: 600;
-  margin-top: 0;
-  margin: auto;
-  margin-left: 64px;
-  flex-direction: row;
-  z-index: 3;
-  /* border: 1px solid red; */
-}
 
-.header_subtitle {
-  position: absolute;
-  bottom: 30px;
-  left: 64px;
-  width: 388px;
-  font-size: 18px;
-  font-weight: 400;
-  margin: 0;
-}
 
-.header_link {
-  text-decoration: none;
-  color: #2f80ed;
-}
+ /*---- DESCRIPTION ----*/
 
-.section_description {
+ .description {
   display: flex;
   flex-direction: row;
   margin: 100px auto 0;
   width: 80%;
   justify-content: space-between;
-  /* border: 1px solid red; */
 }
 
-.two_columns_brief {
+.description__two_columns_brief {
   width: 175px;
   color: #2f80ed;
   line-height: 1.2;
@@ -104,28 +101,34 @@
   margin: 0;
 }
 
-.two_columns_main-text {
+.description__two_columns_main-text {
   margin-top: 0;
   width: 80%;
   min-width: 784px;
 }
 
-.two_columns-paragraph {
+.description__two_columns-paragraph {
   line-height: 34px;
   font-size: 24px;
   font-weight: 400;
   margin: 0;
 }
 
-.two_columns-paragraph:not(:last-child){
+.description__two_columns-paragraph:not(:last-child){
   margin-bottom: 30px;
 }
 
-.two_columns_span-accent {
+.description__two_columns_span-accent {
   font-weight: 600;
 }
 
-.digits {
+ /*---- DESCRIPTION ----*/
+
+
+
+ /*---- DIGITS ----*/
+
+ .digits {
   margin: 100px auto 0;
   display: grid;
 }
@@ -161,17 +164,16 @@
   height: auto;
 }
 
-.table_cell {
-  /* border: 1px solid red; */
+.table__cell {
   width: 250px;
   margin-bottom: 60px;
 }
 
-.table_cell:nth-last-child(-n+4) {
+.table__cell:nth-last-child(-n+4) {
   margin-bottom: 0px;
 }
 
-.table_heading {
+.table__heading {
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
@@ -179,16 +181,22 @@
   margin-bottom: 20px;
 }
 
-.table_text {
+.table__text {
   line-height: 1.2;
   font-size: 18px;
   font-weight: 400;
   margin: 0;
 }
 
-.table_text:not(:last-child) {
+.table__text:not(:last-child) {
   margin-bottom: 20px;
 }
+
+ /*---- DIGITS ----*/
+
+
+
+/*---- FEYNMAN ----*/
 
 .feynman {
   background-color: #f1f1f1;
@@ -208,8 +216,8 @@
   font-weight: 600;
   text-align: center;
   width: 648px;
-  margin: 100px auto 70px;
-
+  margin: 0 auto 70px;
+  padding-top: 100px;
 }
 
 .feynman__subtitle {
@@ -232,6 +240,12 @@
   color: #2f80ed;
 }
 
+/*---- FEYNMAN ----*/
+
+
+
+/*---- KAUFMAN ----*/
+
 .kaufman {
   margin: 100px auto 0;
   margin: 0;
@@ -242,11 +256,9 @@
   overflow: hidden;
   position: relative;
   z-index: 4;
-
-
 }
 
-.section__title_theme_dark {
+.section_title_theme_dark {
   display: flex;
   justify-content: center;
   line-height: 1.15;
@@ -254,10 +266,9 @@
   font-weight: 600;
   margin: 90px auto 0;
   width: 60%;
-
 }
 
-.section__subtitle_theme_dark {
+.section_subtitle_theme_dark {
   display: flex;
   justify-content: center;
   width: 60%;
@@ -276,8 +287,6 @@
 .table__cell_theme_dark:nth-last-child(-n+5) {
   margin-bottom: 0px;
 }
-
-
 
 .table__heading_theme_dark {
   line-height: 1.15;
@@ -303,8 +312,13 @@ position: absolute;
 top: 0;
 right: -210px;
 z-index: -1;
-
 }
+
+/*---- KAUFMAN ----*/
+
+
+
+/*---- FOOTER ----*/
 
 .footer {
   background-color: #000;
@@ -313,16 +327,9 @@ z-index: -1;
   padding-top: 60px;
   padding-bottom: 40px;
   min-height: 250px;
-
-
 }
 
-.footer .logo_place_footer {
-  width: 228px;
-  height: 32px;
-}
-
-.footer__column {
+.footer__columns {
   margin: 0;
   margin: 0 auto;
   color: white;
@@ -333,12 +340,27 @@ z-index: -1;
   justify-content: space-between;
 }
 
-.footer__column_info {
+.footer__column_content_copyright{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 711px;
 }
 
-.footer__column_social {
+.footer__logo_place_footer {
+  width: 228px;
+  height: 32px;
+}
+
+.footer__author {
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  margin: 18px 0;
+}
+
+.footer__column_info {
   display: flex;
   flex-direction: column;
 }
@@ -349,6 +371,11 @@ z-index: -1;
   font-weight: 600;
   margin: 0;
   margin-bottom: 20px;
+}
+
+.footer__footer_menu {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__column_links {
@@ -364,20 +391,9 @@ z-index: -1;
   margin-bottom: 16px;
 }
 
-.footer__column_content_copyright{
+.footer__column_social {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex-basis: 711px;
-
-}
-
-.author {
-  line-height: 25px;
-  font-size: 18px;
-  font-weight: 400;
-  margin: 0;
-  margin: 18px 0;
 }
 
 .footer__social-icon {
@@ -385,3 +401,16 @@ z-index: -1;
   height: 16px;
   margin-right: 10px;
 }
+
+/*---- FOOTER ----*/
+
+
+
+
+
+
+
+
+
+
+
