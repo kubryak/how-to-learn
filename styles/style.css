@@ -1,3 +1,13 @@
+@keyframes rotate-square {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -8,6 +18,15 @@
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
+
+
+/*---- ANIMATION ----*/
+
+.rotation {
+  animation: 20s infinite linear rotate-square;
+}
+
+/*---- ANIMATION ----*/
 
 /*---- HEADER ----*/
 
@@ -71,7 +90,7 @@
   top: 64px;
   right: 0;
   z-index: 1;
-}
+  }
 
 .header__main-illustration {
   width: 765px;
@@ -91,13 +110,14 @@
 
 .description {
   margin: 100px auto 0;
-  width: 80%;
+  display: flex;
+  justify-content: center;
 }
 
 .two-columns {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  width: 80%;
 }
 
 .two-columns__brief {
@@ -137,7 +157,7 @@
 /*---- DIGITS ----*/
 
 .digits {
-  margin: 100px auto 0;
+  margin: 100px auto 100px;
   display: grid;
 }
 
@@ -158,7 +178,7 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: 400;
-  margin: 20px auto 60px;
+  margin: 20px auto 0;
 }
 
 .table {
@@ -166,7 +186,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 60px auto 0;
   padding: 0;
   width: 1100px;
   height: auto;
@@ -209,7 +229,6 @@
 .feynman {
   background-color: #f2f2f2;
   margin: 0;
-  margin-top: 100px;
   min-height: 890px;
   background-image: url(../images/feynman.png);
   background-repeat: no-repeat;
@@ -384,3 +403,77 @@
 }
 
 /*---- FOOTER ----*/
+
+.techniques {
+  margin: auto;
+  width: 80%;
+  padding-top: 100px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  width: 920px;
+  margin: auto;
+}
+
+.cards__item {
+  list-style-type: none;
+  margin: 0;
+  width: 240px;
+  text-align: center;
+  margin-right: 100px;
+}
+
+ .cards__item:nth-child(3) {
+  margin-right: 0;
+}
+
+.cards__image {
+  border-radius: 160px;
+  width: 160px;
+  height: 160px;
+  margin: 60px 40px 43px;
+}
+
+.cards__title {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.cards__description {
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.video {
+  padding-top: 100px;
+  margin: auto;
+}
+
+.video__iframes {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 50px;
+}
+
+.video__iframe {
+  margin: 0;
+  margin-right: 20px;
+}
+
+.oakley {
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+  padding-top: 160px;
+}
