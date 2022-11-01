@@ -1,11 +1,3 @@
-@import url(./__cell/__cell.css);
-@import url(./__heading/__heading.css);
-@import url(./__text/__text.css);
-@import url(./__cell/_theme_dark/_theme_dark.css);
-@import url(./__heading/_theme_dark/_theme_dark.css);
-@import url(./__text/_theme_dark/_theme_dark.css);
-@import url(./_theme_dark/_theme_dark.css);
-
 .table {
   display: flex;
   flex-wrap: wrap;
