@@ -1,0 +1,15 @@
+@import url(./__author/__author.css);
+@import url(./__book-container/__book-container.css);
+@import url(./__book-pic/__book-pic.css);
+@import url(./__buy-link/__buy-link.css);
+@import url(./__container/__containter.css);
+@import url(./__quote-author-sublime/__quote-author-sublime.css);
+@import url(./__quote-author/__quote-author.css);
+@import url(./__quote/__quote.css);
+@import url(./__title/__title.css);
+
+.khan {
+  background-color: #f2f2f2;
+  margin: auto;
+  padding-top: 105px;
+}

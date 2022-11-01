@@ -1,0 +1,13 @@
+@keyframes rotate-square {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+
+}
+
+.rotation {
+  animation: 20s infinite linear rotate-square;
+}
